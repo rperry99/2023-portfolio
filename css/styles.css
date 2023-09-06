@@ -1,0 +1,36 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties */
+:root {
+    /* Color Styles */
+    --clr-dark: #373737;
+    --clr-light: #fef9ef;
+    --clr-accent: #439775;
+
+    /* Font Family */
+    --ff-primary: 'Raleway', sans-serif;
+    --ff-secondary: monospace;
+
+    /* Font Weight */
+    --fw-regular: 300;
+    --fw-bold: 900;
+
+    /* Font Sizes */
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+/* Media Queries */
+@media(min-width: 800px){
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-boyd: 1.125rem;
+    }
+}
+
