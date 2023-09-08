@@ -75,11 +75,12 @@ img {
     color: var(--clr-light);
     text-decoration: none;
     cursor: button;
-    font-size: .8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
+    font-family: var(--ff-secondary);
 }
 
 .btn:hover {
