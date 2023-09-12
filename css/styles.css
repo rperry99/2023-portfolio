@@ -118,6 +118,7 @@ h3 { font-size: var(--fs-h3); }
 
 .section__subtitle--intro {
     display: inline-block;
+    text-transform: lowercase;
 }
 
 .section__subtitle--intro,
@@ -127,7 +128,6 @@ h3 { font-size: var(--fs-h3); }
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
-    text-transform: lowercase;
 }
 
 /* Navigation */
