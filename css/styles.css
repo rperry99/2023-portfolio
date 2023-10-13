@@ -70,6 +70,7 @@ img {
 
 /* Buttons */
 
+.work-btn,
 .btn {
   display: inline-block;
   padding: 0.5em 2.5em;
@@ -443,6 +444,24 @@ header {
   opacity: 0.5;
 }
 
+.tech-stack {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 426px) {
+  .tech-stack {
+    width: 90%;
+  }
+}
+
+.tech-stack i {
+  font-size: 2rem;
+}
+
 .portfolio__ctas {
   /* margin-top: 10px; */
   display: grid;
@@ -557,6 +576,10 @@ header {
   margin: 45px;
   align-items: center;
   justify-content: center;
+}
+
+.individual__portfolio--ctas .btn {
+  width: 150px;
 }
 
 @media (max-width: 640px) {
