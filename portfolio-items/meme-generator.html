@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Generator</title>
+
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="../css/normalize.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <div class="logo">
+        <a href="../index.html"><img src="../img/logo_green.png" alt="" /></a>
+      </div>
+      <button class="nav__toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#services" class="nav__link">My Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#work" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#about" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+      <h1 class="section__title section__title--intro">
+        Meme <strong>Generator</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        make yourself laugh
+      </p>
+      <!-- <img
+        src="../img/screenshot_meme-generator.png"
+        alt="A screenshot from the project."
+        class="intro__img"
+      /> -->
+    </section>
+
+    <div class="portfolio-item-individual">
+      <p>
+        Who said all of these coding projects had to be serious? To get my hands
+        dirty with react, I wanted to make this little web app where you can
+        generate your own memes! I use the
+        <a href="https://imgflip.com/api" class="portfolio-link">ImgFlip API</a>
+        to grab some meme images, and let you randomly select one from the top
+        100 memes.
+      </p>
+      <!-- Think of this image as a header in notion. -->
+      <img
+        src="../img/meme-generator.gif"
+        alt="A gif of the meme generator in action."
+      />
+      <div class="individual__portfolio--ctas">
+        <a
+          href="https://github.com/rperry99/03_meme-generator"
+          class="btn github-btn"
+          target="_blank"
+          ><i class="fa-brands fa-github"></i>Repo</a
+        >
+        <a
+          href="https://rperry99.github.io/03_meme-generator/"
+          class="btn demo-btn"
+          target="_blank"
+          ><i class="fa-solid fa-globe"></i>Demo</a
+        >
+      </div>
+      <p>
+        There really isn't a whole lot going on with this app. Mainly, I am
+        using React, along with state management, to be able to allow the user
+        to type in a message that can correspond to the random meme you pull.
+      </p>
+      <p>
+        I am not actually calling the API directly in this project. In an effort
+        to reduce calls to an API, I had pulled the top 100 meme images, and
+        pulled them into a separate JavaScript file and call them from there.
+        This way, I don't overload an API with too many requests, and let my
+        little web app be as fast as possible.
+      </p>
+      <p>
+        I am using a form for the inputs, and as it turns out, forms are not as
+        straight forward as they normally are when working with React.
+        Currently, the way I have this working is that every time you type in
+        the form field, the state gets updated.
+      </p>
+      <p>
+        Every time the "get a new meme image" button is clicked, a random number
+        will be generated between 0 and the lenght of the object holding the
+        memes. Then it will put that random number index meme on the screen for
+        you!
+      </p>
+      <img
+        src="../img/screenshot_meme-generator.png"
+        alt="A screenshot of a meme I made from this generator."
+      />
+      <p>There's a few things I would like to point out with this project:</p>
+      <ul>
+        <li>
+          This is <strong>not</strong> a responsive project. My intent was to
+          focus on the functionality. So responsiveness was not something I was
+          focusing on.
+        </li>
+        <li>
+          Some of the meme images are not going to be in a correct format for
+          this generator. I did not hand-select the meme images that are getting
+          used. So you may see something where the "top text / bottom text" meme
+          format doesn't make sense.
+        </li>
+        <li>
+          This is a minor issue, but in the gif at the top of the page, the
+          cursor appears to not be clicking in the right spot. That was an issue
+          with the recording software, and not my app.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="mailto:rperry1886@gmail.com" class="footer__link"
+        >rperry1886@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="https://twitter.com/russintech" class="social-list__link"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a
+            href="https://www.linkedin.com/in/russ-perry-22b638a8/"
+            class="social-list__link"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a
+            href="https://www.instagram.com/snapsbyrp/"
+            class="social-list__link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://github.com/rperry99" class="social-list__link"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://codepen.io/rperry1886/" class="social-list__link"
+            ><i class="fa-brands fa-codepen"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="../js/index.js"></script>
+  </body>
+</html>
