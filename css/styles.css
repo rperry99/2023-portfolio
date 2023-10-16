@@ -436,11 +436,11 @@ header {
   opacity: 0;
   color: var(--clr-light);
   text-align: center;
-  transition: opacity 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition: opacity 0.3s;
 }
 
 .portfolio__item:hover .item-text {
@@ -463,32 +463,6 @@ header {
   .tech-stack {
     width: 90%;
   }
-}
-
-.portfolio__ctas {
-  /* margin-top: 10px; */
-  display: grid;
-  grid-template-areas:
-    'github demo'
-    'study study';
-  gap: 20px;
-  width: 60%;
-}
-
-@media (max-width: 426px) {
-  .portfolio__ctas {
-    width: 90%;
-  }
-}
-
-.github-btn {
-  grid-area: github;
-}
-.demo-btn {
-  grid-area: demo;
-}
-.study-btn {
-  grid-area: study;
 }
 
 @media (max-width: 640px) {
